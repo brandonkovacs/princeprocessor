@@ -30,8 +30,8 @@ clean:
 pp32.bin: pp.c mpz_int128.h
 	$(CC_LINUX32)   $(CFLAGS_LINUX32)   -o $@ $^
 
-pp64.bin: pp.c
-	$(CC_LINUX64)   $(CFLAGS_LINUX64)   -o $@ $^
+pp64.bin: pp.c mpz_int128.h
+	$(CC_LINUX64)   $(CFLAGS_LINUX64)   -o $@ $<
 
 pp32.exe: pp.c mpz_int128.h
 	$(CC_WINDOWS32) $(CFLAGS_WINDOWS32) -o $@ $^
